@@ -33,6 +33,9 @@ The project is part of a broader **multimodal Edge-AI health monitoring system**
 
 The primary goal is to demonstrate that a compact neural network can perform useful ECG classification on a resource-constrained **RISC-V embedded platform**.
 
+<img width="802" height="402" alt="image" src="https://github.com/user-attachments/assets/bfb1ea0d-6687-4c67-b78f-1ed85acaf9dd" />
+
+
 ---
 
 ## Key Highlights
