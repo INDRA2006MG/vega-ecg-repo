@@ -59,69 +59,12 @@ The primary goal is to demonstrate that a compact neural network can perform use
 
 ---
 
+# Classification Waveform
+
+<img width="1536" height="1024" alt="WhatsApp Image 2026-09-11 at 6 31 27 PM" src="https://github.com/user-attachments/assets/06704536-51ff-4fd2-8d76-3d77d99a27d2" />
+
+
 # System Architecture
 
 <img width="1536" height="1024" alt="WhatsApp Image 2026-09-11 at 12 45 51 PM" src="https://github.com/user-attachments/assets/715c54c1-ff80-411b-9cae-ab43c9b8a628" />
 
-
-```text
-                    ┌─────────────────────────────┐
-                    │       ECG Acquisition       │
-                    │        / ECG Dataset        │
-                    └──────────────┬──────────────┘
-                                   │
-                                   ▼
-                    ┌─────────────────────────────┐
-                    │       Causal R-Peak         │
-                    │         Detection            │
-                    └──────────────┬──────────────┘
-                                   │
-                                   ▼
-                    ┌─────────────────────────────┐
-                    │   1024-Sample Causal        │
-                    │       Context Window         │
-                    └──────────────┬──────────────┘
-                                   │
-                                   ▼
-                    ┌─────────────────────────────┐
-                    │  Centred 256-Sample Beat    │
-                    │       Normalization          │
-                    └──────────────┬──────────────┘
-                                   │
-                                   ▼
-                    ┌─────────────────────────────┐
-                    │       Q8.8 Quantization     │
-                    └──────────────┬──────────────┘
-                                   │
-                                   ▼
-              ┌──────────────────────────────────────────┐
-              │          MultiScale-SE-CNN-Tiny          │
-              │                                          │
-              │  Multi-scale Conv1D                      │
-              │          ↓                               │
-              │  SE Attention + ReLU                     │
-              │          ↓                               │
-              │  Residual Block 1                        │
-              │          ↓                               │
-              │  MaxPool                                 │
-              │          ↓                               │
-              │  Residual Block 2                        │
-              │          ↓                               │
-              │  MaxPool                                 │
-              │          ↓                               │
-              │  Global Average Pooling                   │
-              │          ↓                               │
-              │  Dense → Dense(5)                        │
-              └──────────────────────┬───────────────────┘
-                                     │
-                                     ▼
-                         ┌─────────────────────┐
-                         │    Argmax Output    │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                     ┌──────────────────────────┐
-                     │ AAMI 5-Class Classification│
-                     │                          │
-                     │ N │ S │ V │ F │ Q       │
-                     └──────────────────────────┘
