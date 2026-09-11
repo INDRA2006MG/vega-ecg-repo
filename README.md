@@ -97,8 +97,7 @@ Designed as part of a broader embedded health-monitoring platform integrating:
 - 💓 **MAX30102 — heart rate / SpO₂**
 - 🏃 **MPU6050 — motion sensing**
 - 🌡️ **MLX90614 — body temperature**
-- 📟 **16×2 LCD — local results**
-- 📡 **UART — real-time telemetry**
+- 📟 **16×4 LCD — local results**
 
 > **From raw ECG → R-peak detection → beat extraction → fixed-point CNN inference → arrhythmia classification — everything happens locally on the RISC-V device.**
 
