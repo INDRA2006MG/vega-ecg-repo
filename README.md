@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/CPU-THEJAS32%20RV32IM-orange" />
   <img src="https://img.shields.io/badge/Inference-On--Device-success" />
   <img src="https://img.shields.io/badge/Precision-Q8.8-purple" />
-  <img src="https://img.shields.io/badge/Language-C99-informational" />
+  <img src="https://img.shields.io/badge/Language-C++-informational" />
   <img src="https://img.shields.io/badge/AI-1D%20CNN-red" />
 </p>
 
@@ -29,7 +29,6 @@ The project is part of a broader **multimodal Edge-AI health monitoring system**
 - 🏃 Motion sensing
 - 🌡️ Body-temperature monitoring
 - 📟 Local LCD display
-- 📡 UART telemetry
 
 The primary goal is to demonstrate that a compact neural network can perform useful ECG classification on a resource-constrained **RISC-V embedded platform**.
 
