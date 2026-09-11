@@ -61,6 +61,9 @@ The primary goal is to demonstrate that a compact neural network can perform use
 
 # System Architecture
 
+<img width="1536" height="1024" alt="WhatsApp Image 2026-09-11 at 12 45 51 PM" src="https://github.com/user-attachments/assets/715c54c1-ff80-411b-9cae-ab43c9b8a628" />
+
+
 ```text
                     ┌─────────────────────────────┐
                     │       ECG Acquisition       │
